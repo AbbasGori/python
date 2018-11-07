@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Hello World!"
+    return "Hello World! I am Abbas Gori"
 
 if __name__ == '__main__':
-    app.run(host='ec2-18-234-201-254.compute-1.amazonaws.com', port=22)
+    app.run(host='ec2-18-234-201-254.compute-1.amazonaws.com', port=80)
 
