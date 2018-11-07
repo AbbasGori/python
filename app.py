@@ -7,5 +7,5 @@ def hello():
     return "Hello World!"
 
 if __name__ == '__main__':
-    app.run(host='172.31.83.82', port=22)
+    app.run(host='ec2-18-234-201-254.compute-1.amazonaws.com', port=22)
 
