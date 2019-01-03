@@ -1,17 +1,24 @@
 {
+  "name": "Deploy",
+  "application": "sample",
+  "id": "2650c7c9-dd0a-4f59-ab0d-9c96a34cd1bc",
   "appConfig": {},
+  "keepWaitingPipelines": true,
+  "lastModifiedBy": "anonymous",
+  "limitConcurrent": true,
+  "parallel": true,
   "expectedArtifacts": [
     {
       "defaultArtifact": {
         "kind": "default.gcs",
-        "name": "gs://s4-project-202316-kubernetes-manifests/deployments/sample-frontend-production.yaml",
-        "reference": "gs://s4-project-202316-kubernetes-manifests/deployments/sample-frontend-production.yaml",
+        "name": "gs://PROJECT-kubernetes-manifests/deployments/sample-frontend-production.yaml",
+        "reference": "gs://PROJECT-kubernetes-manifests/deployments/sample-frontend-production.yaml",
         "type": "gcs/object"
       },
       "id": "f07830d8-80ac-4d21-a879-35c1f3592698",
       "matchArtifact": {
         "kind": "gcs",
-        "name": "gs://s4-project-202316-kubernetes-manifests/deployments/sample-frontend-production.yaml",
+        "name": "gs://PROJECT-kubernetes-manifests/deployments/sample-frontend-production.yaml",
         "type": "gcs/object"
       },
       "useDefaultArtifact": true,
@@ -21,14 +28,14 @@
     {
       "defaultArtifact": {
         "kind": "default.gcs",
-        "name": "gs://s4-project-202316-kubernetes-manifests/deployments/sample-backend-production.yaml",
-        "reference": "gs://s4-project-202316-kubernetes-manifests/deployments/sample-backend-production.yaml",
+        "name": "gs://PROJECT-kubernetes-manifests/deployments/sample-backend-production.yaml",
+        "reference": "gs://PROJECT-kubernetes-manifests/deployments/sample-backend-production.yaml",
         "type": "gcs/object"
       },
       "id": "2d48e090-5610-4691-86e5-88c70123367a",
       "matchArtifact": {
         "kind": "gcs",
-        "name": "gs://s4-project-202316-kubernetes-manifests/deployments/sample-backend-production.yaml",
+        "name": "gs://PROJECT-kubernetes-manifests/deployments/sample-backend-production.yaml",
         "type": "gcs/object"
       },
       "useDefaultArtifact": true,
@@ -38,14 +45,14 @@
     {
       "defaultArtifact": {
         "kind": "default.gcs",
-        "name": "gs://s4-project-202316-kubernetes-manifests/services/sample-backend-prod.yaml",
-        "reference": "gs://s4-project-202316-kubernetes-manifests/services/sample-backend-prod.yaml",
+        "name": "gs://PROJECT-kubernetes-manifests/services/sample-backend-prod.yaml",
+        "reference": "gs://PROJECT-kubernetes-manifests/services/sample-backend-prod.yaml",
         "type": "gcs/object"
       },
       "id": "eafe5bee-19ca-4c81-95f6-f3d5c8695a25",
       "matchArtifact": {
         "kind": "gcs",
-        "name": "gs://s4-project-202316-kubernetes-manifests/services/sample-backend-prod.yaml",
+        "name": "gs://PROJECT-kubernetes-manifests/services/sample-backend-prod.yaml",
         "type": "gcs/object"
       },
       "useDefaultArtifact": true,
@@ -55,14 +62,14 @@
     {
       "defaultArtifact": {
         "kind": "default.gcs",
-        "name": "gs://s4-project-202316-kubernetes-manifests/services/sample-frontend-prod.yaml",
-        "reference": "gs://s4-project-202316-kubernetes-manifests/services/sample-frontend-prod.yaml",
+        "name": "gs://PROJECT-kubernetes-manifests/services/sample-frontend-prod.yaml",
+        "reference": "gs://PROJECT-kubernetes-manifests/services/sample-frontend-prod.yaml",
         "type": "gcs/object"
       },
       "id": "e169983d-9d3f-42fc-a739-f4f91e9bdc1c",
       "matchArtifact": {
         "kind": "gcs",
-        "name": "gs://s4-project-202316-kubernetes-manifests/services/sample-frontend-prod.yaml",
+        "name": "gs://PROJECT-kubernetes-manifests/services/sample-frontend-prod.yaml",
         "type": "gcs/object"
       },
       "useDefaultArtifact": true,
@@ -72,15 +79,15 @@
     {
       "defaultArtifact": {
         "kind": "default.docker",
-        "name": "gcr.io/s4-project-202316/csui-ci",
-        "reference": "gcr.io/s4-project-202316/sample-app:v1.0.0",
+        "name": "gcr.io/PROJECT/sample-app",
+        "reference": "gcr.io/PROJECT/sample-app:v1.0.0",
         "type": "docker/image",
         "version": "v1.0.0"
       },
       "id": "80c8982d-f5df-4d31-b828-5d537d8f67aa",
       "matchArtifact": {
         "kind": "docker",
-        "name": "gcr.io/s4-project-202316/sample-app",
+        "name": "gcr.io/PROJECT/sample-app",
         "type": "docker/image"
       },
       "useDefaultArtifact": true,
@@ -91,15 +98,15 @@
       "defaultArtifact": {
         "id": "1821af7d-d1ed-43c0-b8d1-fca97ed761d0",
         "kind": "default.gcs",
-        "name": "gs://s4-project-202316-kubernetes-manifests/services/sample-frontend-canary.yaml",
-        "reference": "gs://s4-project-202316-kubernetes-manifests/services/sample-frontend-canary.yaml",
+        "name": "gs://PROJECT-kubernetes-manifests/services/sample-frontend-canary.yaml",
+        "reference": "gs://PROJECT-kubernetes-manifests/services/sample-frontend-canary.yaml",
         "type": "gcs/object"
       },
       "id": "3252c062-dcf0-48cf-a948-569d101f0622",
       "matchArtifact": {
         "id": "7da3f869-69b7-480a-9623-cac2e6c7552c",
         "kind": "gcs",
-        "name": "gs://s4-project-202316-kubernetes-manifests/services/sample-frontend-canary.yaml",
+        "name": "gs://PROJECT-kubernetes-manifests/services/sample-frontend-canary.yaml",
         "type": "gcs/object"
       },
       "useDefaultArtifact": true,
@@ -109,15 +116,15 @@
       "defaultArtifact": {
         "id": "65f4dacd-0a98-4406-9357-6e016319193e",
         "kind": "default.gcs",
-        "name": "gs://s4-project-202316-kubernetes-manifests/services/sample-backend-canary.yaml",
-        "reference": "gs://s4-project-202316-kubernetes-manifests/services/sample-backend-canary.yaml",
+        "name": "gs://PROJECT-kubernetes-manifests/services/sample-backend-canary.yaml",
+        "reference": "gs://PROJECT-kubernetes-manifests/services/sample-backend-canary.yaml",
         "type": "gcs/object"
       },
       "id": "db69c110-d95c-4004-b1e0-3e0d926f6e0b",
       "matchArtifact": {
         "id": "137eadda-b3f0-43c5-a767-c1cff812507c",
         "kind": "gcs",
-        "name": "gs://s4-project-202316-kubernetes-manifests/services/sample-backend-canary.yaml",
+        "name": "gs://PROJECT-kubernetes-manifests/services/sample-backend-canary.yaml",
         "type": "gcs/object"
       },
       "useDefaultArtifact": true,
@@ -127,15 +134,15 @@
       "defaultArtifact": {
         "id": "0ff48afe-8957-4114-a310-3a3c193329a5",
         "kind": "default.gcs",
-        "name": "gs://s4-project-202316-kubernetes-manifests/deployments/sample-backend-canary.yaml",
-        "reference": "gs://s4-project-202316-kubernetes-manifests/deployments/sample-backend-canary.yaml",
+        "name": "gs://PROJECT-kubernetes-manifests/deployments/sample-backend-canary.yaml",
+        "reference": "gs://PROJECT-kubernetes-manifests/deployments/sample-backend-canary.yaml",
         "type": "gcs/object"
       },
       "id": "c9ef0329-2c0a-424c-b74f-3c894ddc4c34",
       "matchArtifact": {
         "id": "2da697c4-839a-4e85-ae0d-ab62efef8235",
         "kind": "gcs",
-        "name": "gs://s4-project-202316-kubernetes-manifests/deployments/sample-backend-canary.yaml",
+        "name": "gs://PROJECT-kubernetes-manifests/deployments/sample-backend-canary.yaml",
         "type": "gcs/object"
       },
       "useDefaultArtifact": true,
@@ -145,15 +152,15 @@
       "defaultArtifact": {
         "id": "f34787e7-fd0c-417e-94fd-3b841e0d4448",
         "kind": "default.gcs",
-        "name": "gs://s4-project-202316-kubernetes-manifests/deployments/sample-frontend-canary.yaml",
-        "reference": "gs://s4-project-202316-kubernetes-manifests/deployments/sample-frontend-canary.yaml",
+        "name": "gs://PROJECT-kubernetes-manifests/deployments/sample-frontend-canary.yaml",
+        "reference": "gs://PROJECT-kubernetes-manifests/deployments/sample-frontend-canary.yaml",
         "type": "gcs/object"
       },
       "id": "a436ab58-954a-4f3d-99f0-c80f54e09a00",
       "matchArtifact": {
         "id": "37fb12bf-22c7-482f-b606-a176ddaecd85",
         "kind": "gcs",
-        "name": "gs://s4-project-202316-kubernetes-manifests/deployments/sample-frontend-canary.yaml",
+        "name": "gs://PROJECT-kubernetes-manifests/deployments/sample-frontend-canary.yaml",
         "type": "gcs/object"
       },
       "useDefaultArtifact": true,
@@ -163,7 +170,6 @@
   "keepWaitingPipelines": false,
   "lastModifiedBy": "anonymous",
   "limitConcurrent": true,
-  "parallel": true,
   "stages": [
     {
       "account": "default",
@@ -171,7 +177,7 @@
       "completeOtherBranchesThenFail": false,
       "continuePipeline": false,
       "failPipeline": true,
-      "manifestArtifactAccount": "gcs-s4-project-202316",
+      "manifestArtifactAccount": "gcs-PROJECT",
       "manifestArtifactId": "2d48e090-5610-4691-86e5-88c70123367a",
       "moniker": {
         "app": "sample"
@@ -197,7 +203,7 @@
       "completeOtherBranchesThenFail": false,
       "continuePipeline": false,
       "failPipeline": true,
-      "manifestArtifactAccount": "gcs-s4-project-202316",
+      "manifestArtifactAccount": "gcs-PROJECT",
       "manifestArtifactId": "f07830d8-80ac-4d21-a879-35c1f3592698",
       "moniker": {
         "app": "sample"
@@ -220,7 +226,7 @@
     {
       "account": "default",
       "cloudProvider": "kubernetes",
-      "manifestArtifactAccount": "gcs-s4-project-202316",
+      "manifestArtifactAccount": "gcs-PROJECT",
       "manifestArtifactId": "eafe5bee-19ca-4c81-95f6-f3d5c8695a25",
       "moniker": {
         "app": "sample"
@@ -240,7 +246,7 @@
     {
       "account": "default",
       "cloudProvider": "kubernetes",
-      "manifestArtifactAccount": "gcs-s4-project-202316",
+      "manifestArtifactAccount": "gcs-PROJECT",
       "manifestArtifactId": "e169983d-9d3f-42fc-a739-f4f91e9bdc1c",
       "moniker": {
         "app": "sample"
@@ -263,7 +269,7 @@
       "completeOtherBranchesThenFail": false,
       "continuePipeline": false,
       "failPipeline": true,
-      "manifestArtifactAccount": "gcs-s4-project-202316",
+      "manifestArtifactAccount": "gcs-PROJECT",
       "manifestArtifactId": "c9ef0329-2c0a-424c-b74f-3c894ddc4c34",
       "moniker": {
         "app": "sample"
@@ -301,7 +307,7 @@
       "completeOtherBranchesThenFail": false,
       "continuePipeline": false,
       "failPipeline": true,
-      "manifestArtifactAccount": "gcs-s4-project-202316",
+      "manifestArtifactAccount": "gcs-PROJECT",
       "manifestArtifactId": "a436ab58-954a-4f3d-99f0-c80f54e09a00",
       "moniker": {
         "app": "sample"
@@ -322,7 +328,7 @@
     {
       "account": "default",
       "cloudProvider": "kubernetes",
-      "manifestArtifactAccount": "gcs-s4-project-202316",
+      "manifestArtifactAccount": "gcs-PROJECT",
       "manifestArtifactId": "db69c110-d95c-4004-b1e0-3e0d926f6e0b",
       "moniker": {
         "app": "sample"
@@ -340,7 +346,7 @@
     {
       "account": "default",
       "cloudProvider": "kubernetes",
-      "manifestArtifactAccount": "gcs-s4-project-202316",
+      "manifestArtifactAccount": "gcs-PROJECT",
       "manifestArtifactId": "3252c062-dcf0-48cf-a948-569d101f0622",
       "moniker": {
         "app": "sample"
@@ -364,17 +370,17 @@
       "expectedArtifactIds": [
         "80c8982d-f5df-4d31-b828-5d537d8f67aa"
       ],
-      "organization": "s4-project-202316",
+      "organization": "PROJECT",
       "payloadConstraints": {
-        "tag": "gcr.io/s4-project-202316/sample-app:v.*"
+        "tag": "gcr.io/PROJECT/sample-app:v.*"
       },
       "pubsubSystem": "google",
       "registry": "gcr.io",
-      "repository": "s4-project-202316/sample-app",
+      "repository": "PROJECT/sample-app",
       "subscriptionName": "gcr-triggers",
       "tag": "v.*",
       "type": "pubsub"
     }
   ],
-  "updateTs": "1546495051035"
+  "updateTs": "1541650310471"
 }
