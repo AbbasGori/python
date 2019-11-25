@@ -4,7 +4,8 @@ pipeline {
         stage('Stage 1') {
             steps {
                 echo 'Hello world!' 
-                docker build -t testdocker -f Dockerfile
+                sh "ls -ltr"
+                sh "docker build -t testdocker -f Dockerfile"
             }
         }
 /*        stage('Building image') {
