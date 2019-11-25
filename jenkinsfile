@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo 'Hello world!' 
                 ls -ltr
+                sh "./docker.sh"
                 sh "docker build -t testdocker -f Dockerfile"
             }
         }
