@@ -31,7 +31,7 @@ pipeline {
         stage('Push Image To GCR') {
             steps {
                 script {
-                    docker.withRegistry( "" ) {
+                    withDockerRegistry(credentialsId: 'gcr:S4 Project') {
                         dockerImage.push()
                     }
                 }
