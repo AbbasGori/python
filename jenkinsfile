@@ -5,16 +5,19 @@ pipeline {
             steps {
                 echo 'Hello world!' 
                 sh "ls -ltr"
-                sh "chmod +x docker.sh"
-                sh "docker build -t testdocker -f Dockerfile"
             }
         }
-/*        stage('Building image') {
+        stage('Building image') {
             steps {
                 script {
                     docker.build registry + ":$BUILD_NUMBER"
                 }
             }
-        } */
+        }
+        stage('Stage 1') {
+            steps {
+                docker ps | grep "$BUILD_NUMBER" 
+            }
+        }
     }
 }
