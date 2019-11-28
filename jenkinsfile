@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('SCM') {
             steps {
-                git ''
+                git 'https://github.com/AbbasGori/python.git'
              }
         }
         stage('Stage 1') {
