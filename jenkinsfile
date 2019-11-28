@@ -5,9 +5,10 @@ pipeline {
             steps {
                 echo 'Hello world!' 
                 sh "ls -ltr"
+                echo "$BUILD_NUMBER"
             }
         }
-        stage('Building image') {
+/*        stage('Building image') {
             steps {
                 script {
                     docker.build registry + ":$BUILD_NUMBER"
@@ -18,6 +19,6 @@ pipeline {
             steps {
                 docker ps | grep "$BUILD_NUMBER" 
             }
-        }
+        } */
     }
 }
