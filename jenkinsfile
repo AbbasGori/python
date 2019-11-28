@@ -3,22 +3,10 @@ pipeline {
     stages {
         stage('SCM') {
             steps {
-                sh "pwd"
-                sh "ls"
                 git 'https://github.com/AbbasGori/python.git'
-                sh "pwd"
-                sh "ls"
              }
         }
-        stage('Stage 1') {
-            steps {
-                echo 'Hello world!'
-                sh "pwd"
-                sh "ls -ltr"
-                echo "$BUILD_NUMBER"
-            }
-        }
-/*        stage('Building image') {
+        stage('Building image') {
             steps {
                 script {
                     docker.build registry + ":$BUILD_NUMBER"
@@ -29,6 +17,6 @@ pipeline {
             steps {
                 docker ps | grep "$BUILD_NUMBER" 
             }
-        } */
+        }
     }
 }
