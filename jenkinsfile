@@ -24,7 +24,17 @@ pipeline {
         
         stage('Stage 1') {
             steps {
-                sh 'docker ps | grep "$BUILD_NUMBER"' 
+                sh 'docker images | grep "$BUILD_NUMBER"' 
+            }
+        }
+        
+        stage('Push Image To GCR') {
+            steps {
+                script {
+                    docker.withRegistry( "" ) {
+                        dockerImage.push()
+                    }
+                }
             }
         }
     }
