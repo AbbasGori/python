@@ -1,11 +1,19 @@
 pipeline {
-    agent any 
+    
+    environment {
+        registry = "gcr.io/s4-project-202316/success4/jenkins-push-test"
+        dockerImage = ""
+    }
+    
+    agent any
+    
     stages {
         stage('SCM') {
             steps {
                 git 'https://github.com/AbbasGori/python.git'
              }
         }
+        
         stage('Building image') {
             steps {
                 script {
@@ -13,6 +21,7 @@ pipeline {
                 }
             }
         }
+        
         stage('Stage 1') {
             steps {
                 sh 'docker ps | grep "$BUILD_NUMBER"' 
