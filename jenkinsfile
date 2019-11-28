@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Stage 1') {
             steps {
-                docker ps | grep "$BUILD_NUMBER" 
+                sh 'docker ps | grep "$BUILD_NUMBER"' 
             }
         }
     }
